@@ -3,41 +3,41 @@ p {
 }
 
 .Card {
-    background: white;
+    background: gray;
     border-radius: 10px;
 }
 
-.Card__img {
+.cardImg {
     text-align: center;
 }
 
-.Card__types {
+.cardTypes {
     display: flex;
     justify-content: center;    
 }
 
-.Card__type {
+.cardType {
     padding: 5px 10px;
     margin: 10px 10px 10px 0;
     border-radius: 5px;
-    background: cyan;
-    color: #fff;
+    background: gold;
+    color: black;
 }
 
-.Card__name {
+.cardName {
     text-align: center;
     text-transform: capitalize;
     font-weight: 800;
 }
 
-.Card__info {
+.cardInfo {
     margin-left: 10px;
 }
 
-.Card__data {
+.cardData {
     padding-bottom: 10px;
 }
 
-.Card__data .title {
+.cardData .title {
     font-weight: 700;
 }
