@@ -15,10 +15,17 @@ function App() {
       let response = await getAllPokemon(initialUrl);
       setNextUrl(response.next);
       setPrevUrl(response.previous)
+      await loadingPokemon(response.results);
       setLoading(false)
     }
     fetchData();
   }, []);
+
+  const loadingPokemon = async(data) => {
+    let pokemon = await Promise.all(data.map(async pokemon => {
+      let pokemonRecord = await getPokemon(pokemon);
+    }))
+  }
 
   return (
     <div>
