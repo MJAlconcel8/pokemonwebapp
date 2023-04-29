@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getAllPokemon } from './services/pokemon';
 import { getPokemon } from './services/pokemon';
-import Card from './components'; 
+import Card from './components/Card'; 
+import Navbar from './components/NavBar';
 import './App.css';
+
+
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -36,6 +39,7 @@ function App() {
     <div>
         {loading ? <h1>Loading...</h1> :(
           <>
+          <Navbar/>
             <div className='grid-container'>
               {pokemonData.map((pokemon,i)=>{
                 return <Card key={i} pokemon={pokemon} />

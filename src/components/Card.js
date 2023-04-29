@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'
+import './cardStyle.css'
 
 function Card({ pokemon }) {
     return (
