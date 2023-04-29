@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getAllPokemon } from './services/pokemon';
 import './App.css';
 
 function App() {
@@ -8,17 +9,22 @@ function App() {
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon';
 
-  async function fetchData() {
-    let response = await getAllPokemon(initialUrl);
-  }
 
   useEffect(() => {
+    async function fetchData() {
+      let response = await getAllPokemon(initialUrl);
+      setNextUrl(response.next);
+      setPrevUrl(response.previous)
+      setLoading(false)
+    }
     fetchData();
   }, []);
 
   return (
     <div>
-
+        {loading ? <h1>Loading...</h1> :(
+          <h1>Data is fetched</h1>
+        )}
     </div>
   );
 }
