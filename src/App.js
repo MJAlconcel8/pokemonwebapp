@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getAllPokemon } from './services/pokemon';
+import { getPokemon } from './services/pokemon';
 import './App.css';
 
 function App() {
@@ -22,11 +23,14 @@ function App() {
   }, []);
 
   const loadingPokemon = async(data) => {
-    let pokemon = await Promise.all(data.map(async pokemon => {
-      let pokemonRecord = await getPokemon(pokemon);
+      let pokemonData = await Promise.all(data.map(async pokemon => {
+      let pokemonRecord = await getPokemon(pokemon.url);
+      return pokemonRecord;
     }))
+    setPokemonData(pokemonData)
   }
 
+  console.log(pokemonData)
   return (
     <div>
         {loading ? <h1>Loading...</h1> :(
