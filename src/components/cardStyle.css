@@ -2,9 +2,11 @@ p {
     margin: 0;
 }
 
-.Card {
+.card {
     background: gray;
     border-radius: 1px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .cardImg {
@@ -22,27 +24,26 @@ p {
     border-radius: 5px;
     background: gold;
     color: black;
-    justify-content: center;  
 }
 
 .cardName {
     text-align: center;
     text-transform: capitalize;
     font-weight: 800;
-    justify-content: center;  
+    padding: 10px;
 }
 
 .cardInfo {
     margin-left: 10px;
-    justify-content: center;  
+    text-align: center;
 }
 
 .cardData {
     padding-bottom: 10px;
-    justify-content: center;  
 }
 
 .cardData .title {
     font-weight: 700;
-    justify-content: center;  
 }
+
+

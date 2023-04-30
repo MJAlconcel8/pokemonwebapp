@@ -2,8 +2,9 @@ import React from 'react';
 import './cardStyle.css'
 
 function Card({ pokemon }) {
+    const pokemonName = pokemon.name.toLowerCase();
     return (
-        <div className='card'>
+        <div className={`card ${pokemonName}`}>
             <div className='cardImg'>
                 <img src={pokemon.sprites.front_default} alt=""/>
             </div>
@@ -25,7 +26,7 @@ function Card({ pokemon }) {
                     <p>{pokemon.weight}</p>
                 </div>
                 <div className='cardData cardDataHeight'>
-                    <p className='Height'>Height</p>
+                    <p className='title'>Height</p>
                     <p>{pokemon.height}</p>
                 </div>
                 <div className='cardData cardDataAbility'>
@@ -36,4 +37,6 @@ function Card({ pokemon }) {
         </div>
     );
 }
+
 export default Card;
+
