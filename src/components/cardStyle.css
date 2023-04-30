@@ -22,22 +22,27 @@ p {
     border-radius: 5px;
     background: gold;
     color: black;
+    justify-content: center;  
 }
 
 .cardName {
     text-align: center;
     text-transform: capitalize;
     font-weight: 800;
+    justify-content: center;  
 }
 
 .cardInfo {
     margin-left: 10px;
+    justify-content: center;  
 }
 
 .cardData {
     padding-bottom: 10px;
+    justify-content: center;  
 }
 
 .cardData .title {
     font-weight: 700;
+    justify-content: center;  
 }
